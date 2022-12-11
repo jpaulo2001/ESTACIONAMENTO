@@ -34,9 +34,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('/') }}">Início</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('contacts') }}">Contactos</a>
-                        </li>
+
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -52,21 +50,33 @@
                             @endif
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('projectos.index') }}">Projectos</a>
+                                <a class="nav-link" href="{{ route('projectos.index') }}">Tarifarios</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('clientes.index') }}">Clientes</a>
+                                <a class="nav-link" href="{{ route('clientes.index') }}">Estacionamento</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('clientes.index') }}">Horarios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('contacts') }}">Contactos</a>
+                            </li>
+
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('dashboard') }}">
                                         {{ __('Dashboard') }}
                                     </a>
+
+                                            <a class="dropdown-item" href="">
+                                                {{ __('Edit Profile') }}
+                                            </a>
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

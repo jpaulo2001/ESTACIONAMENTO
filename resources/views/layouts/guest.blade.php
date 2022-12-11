@@ -37,6 +37,11 @@
                             <a class="nav-link" href="{{ route('dashboard') }}">Área Pessoal</a>
                         </li>
                     @endauth
+                    @auth
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('perfil') }}">Perfil</a>
+                        </li>
+                    @endauth
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
