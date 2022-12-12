@@ -17,10 +17,10 @@ class DefaultUserSeeder extends Seeder
     public function run()
     {
         User::create([
-            'name' => 'José inicial',
-            'email' => 'jemelo@gmail.com',
+            'name' => 'João Silva',
+            'email' => 'joaopaulo6069@hotmail.com',
             'email_verified_at' => Carbon::now(),
-            'password' => bcrypt('123')
+            'password' => bcrypt('12345678')
         ]);
     }
 }
