@@ -33,6 +33,7 @@ class DatabaseSeeder extends Seeder
             Customer::factory()->count(50)->create();
             Project::factory()->count(50)->create();
             ProjectEvent::factory()->count(50)->create();
+
         }
     }
 }

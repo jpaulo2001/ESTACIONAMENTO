@@ -13,14 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tarifarios', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->softDeletes();
-            $table->string('piso')->constrained();
-            $table->date('horario')->constrained();
-            $table->decimal('cost', 18, 2)->nullable();
-        });
+        //
     }
 
     /**
@@ -30,6 +23,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tarifarios');
+        //
     }
 };
