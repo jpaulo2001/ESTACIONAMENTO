@@ -27,7 +27,13 @@ Route::get('/dashboard', \App\Http\Controllers\DashboardController::class)
 
 Route::resource('projectos', \App\Http\Controllers\ProjectController::class)
     ->middleware(['auth', 'verified']);
+
+
 Route::resource('clientes', \App\Http\Controllers\CustomerController::class)
+    ->middleware(['auth', 'verified']);
+
+
+Route::resource('tarifarios', \App\Http\Controllers\CustomerController::class)
     ->middleware(['auth', 'verified']);
 
 require __DIR__.'/auth.php';

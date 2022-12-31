@@ -17,9 +17,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+              <h2><a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', 'Laravel') }} </a></h2>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -32,20 +31,20 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('/') }}">Início</a>
+                         <h3>   <a class="nav-link" href="{{ route('/') }}">Início</a></h3>
                         </li>
 
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <h3>   <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></h3>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <h3>     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></h3>
                                 </li>
                             @endif
                         @else
@@ -53,7 +52,7 @@
                                 <a class="nav-link" href="{{ route('projectos.index') }}">Tarifarios</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('clientes.index') }}">Estacionamento</a>
+                                <a class="nav-link" href="{{ route('clientes.index') }}">Frota</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('clientes.index') }}">Horarios</a>

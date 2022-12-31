@@ -10,6 +10,8 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
+
+//GUEST USER MAIN PAGE
 Route::middleware('guest')->group(function () {
     Route::get('register', [RegisteredUserController::class, 'create'])
                 ->name('register');
@@ -34,6 +36,9 @@ Route::middleware('guest')->group(function () {
                 ->name('password.update');
 });
 
+
+
+//AUTENTICADO MAIN PAGE AFTER LOGIN
 Route::middleware('auth')->group(function () {
     Route::get('verify-email', [EmailVerificationPromptController::class, '__invoke'])
                 ->name('verification.notice');
@@ -53,4 +58,10 @@ Route::middleware('auth')->group(function () {
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
+
+    //edit profile routes, after login
+    Route::get('users/{user}',  ['as' => 'users.edit', 'uses' => 'UserController@edit']);
+
+    Route::patch('users/{user}/update',  ['as' => 'users.update', 'uses' => 'UserController@update']);
+
 });

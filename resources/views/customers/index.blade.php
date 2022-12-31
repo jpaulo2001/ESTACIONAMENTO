@@ -4,8 +4,11 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <a href="{{ route('clientes.create') }}" class="btn btn-primary btn-large">+ Cliente</a>
+                <a href="{{ route('clientes.create') }}" class="btn btn-primary btn-large"> Adicionar Carro</a>
                 <table class="table table-hover table-stripped">
+                    <a href="{{ route('clientes.create') }}" class="btn btn-primary btn-large">Remover Carro</a>
+                    <table class="table table-hover table-stripped">
+                    <!--
                     <thead>
                     <tr>
                         <th>Nome</th>
@@ -33,5 +36,6 @@
         </div>
 
     </div>
+-->
 
 @endsection

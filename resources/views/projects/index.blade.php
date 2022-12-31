@@ -10,7 +10,7 @@
                         <th>Nome</th>
                         <th>Cliente</th>
                         <th>Deadline</th>
-                        <th>Estimativs</th>
+                        <th>Estimativa</th>
                     </tr>
                     </thead>
                     <tbody>
