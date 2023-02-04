@@ -21,6 +21,15 @@ return new class extends Migration
             $table->string('model')->constrained();
             $table->string('plate')->constrained();
         });
+
+        Schema::create('fleets', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+            $table->softDeletes();
+            $table->string('numb_vehicles')->constrained();
+            $table->string('vehicle_id')->constrained();
+            $table->string('client_id')->constrained();
+        });
     }
 
     /**
@@ -31,5 +40,7 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('vehicles');
+        Schema::dropIfExists('fleets');
+
     }
 };

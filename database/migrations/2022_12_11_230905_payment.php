@@ -13,12 +13,22 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('payment', function (Blueprint $table) {
+        Schema::create('payments', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->softDeletes();
-            $table->string('tipo')->constrained();
+            $table->string('type')->constrained();
             $table->decimal('cost', 18, 2)->nullable();
+            $table->decimal('state')->nullable();
+
+        });
+
+        Schema::create('payment_handler', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+            $table->softDeletes();
+            $table->string('user_id')->constrained();
+            $table->decimal('payment_id')->constrained();
         });
     }
 
@@ -30,5 +40,7 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('payment');
+        Schema::dropIfExists('payment_handler');
+
     }
 };

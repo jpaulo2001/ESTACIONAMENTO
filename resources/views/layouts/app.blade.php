@@ -52,7 +52,7 @@
                                 <a class="nav-link" href="{{ route('projectos.index') }}">Tarifarios</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('clientes.index') }}">Frota</a>
+                                <a class="nav-link" href="{{ route('clientes.index') }}">Adicionar Frota</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('clientes.index') }}">Horarios</a>

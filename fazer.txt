@@ -1,0 +1,13 @@
+corrigir a base de dados toda
+fazer as migrates com as tabelas novas
+criar os models todos
+criar os controllers
+criar views
+colocar adicionar, remover carro
+mostrar a frota de carros que o utilizador tem
+e a frota de carros que estao neste momento no parque de estacionamento
+fazer os seeders para preencher as tabelas com os valores
+// dia 18 entrega es
+
+
+19 apresentaçao.

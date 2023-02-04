@@ -20,7 +20,7 @@ class CustomerFactory extends Factory
         return [
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
-            'vat' => fake()->randomNumber(9),
+            'vat' => fake()->randomNumber(6),
             'city' => fake()->city(),
             'country' => fake()->country()
         ];

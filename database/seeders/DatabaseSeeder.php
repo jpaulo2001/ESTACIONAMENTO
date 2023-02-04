@@ -7,6 +7,7 @@ use App\Models\Customer;
 use App\Models\Project;
 use App\Models\ProjectEvent;
 use App\Models\User;
+use App\Models\Vehicle;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\App;
 
@@ -33,6 +34,7 @@ class DatabaseSeeder extends Seeder
             Customer::factory()->count(50)->create();
             Project::factory()->count(50)->create();
             ProjectEvent::factory()->count(50)->create();
+            Vehicle::factory()->count(20)->create();
 
         }
     }

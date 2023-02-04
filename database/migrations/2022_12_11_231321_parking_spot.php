@@ -13,12 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('parkingSpots', function (Blueprint $table) {
+        Schema::create('parking_spots', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->softDeletes();
             $table->integer('numb_spot')->constrained();
             $table->boolean('state')->constrained();
+            $table->boolean('vehicle_id')->constrained();
+            $table->boolean('floor_id')->constrained();
+
+
         });
     }
 
@@ -29,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('parkingSpots');
+        Schema::dropIfExists('parking_spots');
     }
 };

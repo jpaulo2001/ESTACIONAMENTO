@@ -12,13 +12,15 @@ class Customer extends Model
 
     protected $guarded = ['id', 'created_at', 'updated_at', 'deleted_at'];
 
-    public function projects()
+    public function fleets()
     {
-        return $this->hasMany(Project::class);
+        return $this->hasMany(Fleet::class);
     }
 
-    public function events()
+    public function payments()
     {
-        return $this->hasManyThrough(ProjectEvent::class, Project::class);
+        return $this->hasMany(Payment::class);
     }
+
+
 }

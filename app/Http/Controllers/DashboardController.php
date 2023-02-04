@@ -15,8 +15,7 @@ class DashboardController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function __invoke(Request $request, DashboardService $service)
-    {
+   public function __invoke(Request $request, DashboardService $service){
         /*
          * top e bottom X de projectos com mais horas
          * top e bottom X de clientes com mais projectos
@@ -26,16 +25,20 @@ class DashboardController extends Controller
          * Total Horas por mes
          */
 
+
         return view(
             'dashboard',
             [
-                'top_projects' => $service->getProjectHours(10),
-                'bottom_projects' => $service->getProjectHours(10, true),
-                'top_customers' => $service->getCustomerProjects(10),
-                'bottom_customers' => $service->getCustomerProjects(10, true),
-                'top_customer_hours' => $service->getCustomerHours(10),
-                'bottom_customer_hours' => $service->getCustomerHours(10, true),
+                'carros' => $service->getCarList(),
+               // 'bottom_projects' => $service->getProjectHours(10, true),
+                //'top_customers' => $service->getCustomerProjects(10),
+                //'bottom_customers' => $service->getCustomerProjects(10, true),
+                //'top_customer_hours' => $service->getCustomerHours(10),
+                //'bottom_customer_hours' => $service->getCustomerHours(10, true),
             ]
         );
     }
+    */
 }
+
+
